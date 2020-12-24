@@ -1,5 +1,7 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
+import ObjectComponent from "../objectComponent";
+import BindActionCreatorsComponent from "../bindActionCreatorsComponent";
 
 export const Main = () => {
     let addNewMessage = () => {
@@ -9,6 +11,8 @@ export const Main = () => {
     return (
         <div>
             <AddMessageFormRedux onSubmit={addNewMessage} />
+            <ObjectComponent />
+            <BindActionCreatorsComponent />
         </div>
     );
 }
