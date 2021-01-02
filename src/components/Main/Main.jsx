@@ -17,8 +17,6 @@ export class Main extends Component {
 
         this.changeCars = this.changeCars.bind(this);
         this.deleteCars = this.deleteCars.bind(this);
-
-        console.log('constructor')
     }
 
     changeCars() {
@@ -29,6 +27,20 @@ export class Main extends Component {
                     {
                         modelCar: 'Toyota',
                         numberCar: '333'
+                    }
+                ]
+            }
+        });
+    }
+
+    changeCarsOther = () => {
+        console.log('changeCarsOther')
+        this.setState((state) => {
+            return {
+                cars: [
+                    {
+                        modelCar: 'Ford',
+                        numberCar: '555'
                     }
                 ]
             }
@@ -58,6 +70,7 @@ export class Main extends Component {
                     }
                 </div>
                 <button onClick={this.changeCars}>Изменить машину</button>
+                <button onClick={this.changeCarsOther}>Изменить машину еще раз</button>
                 <button onClick={this.deleteCars}>Удалить машину</button>
             </>
         );

@@ -2,35 +2,41 @@ import React, {Component} from "react";
 
 export class Car extends Component {
 
+    constructor(props) {
+        super(props);
+
+        console.log('constructor')
+    }
+
     static getDerivedStateFromRrops(props, state) {
         console.log('getDerivedStateFromRrops', props, state)
         return props
     }
 
-    UNSAFE_componentWillMount() {
-        console.log('UNSAFE_componentWillMount')
-    }
-
-    UNSAFE_componentWillUpdate() {
-        console.log('UNSAFE_componentWillUpdate')
-    }
-
-    UNSAFE_componentWillReceiveProps() {
-        console.log('UNSAFE_componentWillReceiveProps')
-    }
+    // UNSAFE_componentWillMount() {
+    //     console.log('UNSAFE_componentWillMount')
+    // }
+    //
+    // UNSAFE_componentWillUpdate() {
+    //     console.log('UNSAFE_componentWillUpdate')
+    // }
+    //
+    // UNSAFE_componentWillReceiveProps() {
+    //     console.log('UNSAFE_componentWillReceiveProps')
+    // }
 
     componentDidMount() {
         console.log('componentDidMount')
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('componentDidUpdate')
-    }
+    // componentDidUpdate(prevProps, prevState, snapshot) {
+    //     console.log('componentDidUpdate')
+    // }
 
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log('shouldComponentUpdate')
-        return false
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     console.log('shouldComponentUpdate')
+    //     return false
+    // }
 
     componentWillUnmount() {
         console.log('componentWillUnmount')
@@ -38,6 +44,7 @@ export class Car extends Component {
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log('getSnapshotBeforeUpdate')
+        return prevProps
     }
 
     render() {

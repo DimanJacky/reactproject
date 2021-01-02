@@ -13,7 +13,7 @@ componentDidMount
 
 componentWillReceiveProps
 
-shouldComponentUpdate
+shouldComponentUpdate если используется, то не вызываются componentWillUpdate и componentDidUpdate
 
 componentWillUpdate
 
@@ -30,4 +30,4 @@ componentWillUnmount
 #### Жизненные циклы React 16.3+
 getDerivedStateFromRrops
 
-getSnapshotBeforeUpdate
+getSnapshotBeforeUpdate используется вместе с componentDidUpdate
