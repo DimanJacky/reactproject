@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {createStore, applyMiddleware, compose} from 'redux'
-import {Provider} from 'react-redux'
-import reduxThunk from 'redux-thunk'
-import rootReducer from './redux/rootReducer'
+import {createStore, applyMiddleware, compose} from 'redux';
+import {Provider} from 'react-redux';
+import reduxThunk from 'redux-thunk';
+import rootReducer from './redux/rootReducer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const composeEnhancers =
     typeof window === 'object' &&
