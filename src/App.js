@@ -8,8 +8,8 @@ class App extends Component {
     return (
         <div className="App">
             <Main />
-          <p>{this.props.counter}</p>
-          <button onClick={this.props.onAdd}>Добавить 1</button>
+          {/*<p>{this.props.counter}</p>*/}
+          {/*<button onClick={this.props.onAdd}>Добавить 1</button>*/}
         </div>
     )
   }
