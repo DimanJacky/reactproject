@@ -1,25 +1,15 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux'
-import {add} from "./redux/actions/actions";
-import {Main} from "./components/Main/Main";
+import React from 'react';
+import Main from "./components/Main/Main";
+import MyContext from "./components/Context";
 
-class App extends Component {
-  render() {
+function App() {
     return (
         <div className="App">
+          <MyContext.Provider value={'Ivan'}>
             <Main />
+          </MyContext.Provider>
         </div>
-    )
-  }
+    );
 }
-function mapStateToProps(state) {
-  return {
-    counter: state.counter.counter
-  }
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    onAdd: () => dispatch(add())
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+
+export default App
