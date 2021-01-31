@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {add} from "./redux/actions/actions";
-import {Main} from "./components/Main/Main";
+import InitializeFromStateForm from "./components/UserEdit";
 
 class App extends Component {
   render() {
     return (
         <div className="App">
-            <Main />
-          <p>{this.props.counter}</p>
-          <button onClick={this.props.onAdd}>Добавить 1</button>
+          <InitializeFromStateForm />
         </div>
     )
   }
